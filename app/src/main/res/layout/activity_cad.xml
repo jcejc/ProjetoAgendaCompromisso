@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="android.usuario.projetoagendacompromisso.CadActivity">
+
+    <EditText
+        android:id="@+id/rtDescricao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:hint="Descrição"
+        android:inputType="textPersonName" />
+
+    <RadioGroup
+        android:id="@+id/Tipo"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/rtDescricao"
+        android:layout_alignLeft="@+id/rtDescricao"
+        android:layout_alignStart="@+id/rtDescricao"
+        android:layout_marginTop="29dp">
+
+        <RadioButton
+            android:id="@+id/rbReuniao"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:text="Reunião" />
+
+        <RadioButton
+            android:id="@+id/rbVisita"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Visita ao Cliente" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/rtHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Tipo"
+        android:layout_alignStart="@+id/Tipo"
+        android:layout_below="@+id/Tipo"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:hint="Hora"
+        android:inputType="time" />
+
+    <EditText
+        android:id="@+id/rtData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rtHora"
+        android:layout_alignStart="@+id/rtHora"
+        android:layout_below="@+id/rtHora"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:hint="Data"
+        android:inputType="date" />
+
+    <Button
+        android:id="@+id/btSalvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:text="Salvar Compromisso"
+        android:layout_below="@+id/rtData"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
