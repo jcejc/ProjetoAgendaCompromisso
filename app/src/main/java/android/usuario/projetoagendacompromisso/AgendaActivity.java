@@ -9,7 +9,6 @@ import android.widget.Button;
 public class AgendaActivity extends AppCompatActivity {
 
     Button btCadastro, btLista;
-    String teste;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
