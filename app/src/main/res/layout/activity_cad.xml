@@ -11,24 +11,33 @@
         android:id="@+id/ctDescricao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="70dp"
         android:ems="10"
         android:hint="Descrição"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:id="@+id/ctTipo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/ctDescricao"
-        android:layout_alignStart="@+id/ctDescricao"
-        android:layout_below="@+id/ctDescricao"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="Tipo"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:layout_below="@+id/ctDescricao"
+        android:layout_alignLeft="@+id/ctDescricao"
+        android:layout_alignStart="@+id/ctDescricao" />
+
+    <Button
+        android:id="@+id/btSalvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salvar Compromisso"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="138dp" />
 
     <EditText
         android:id="@+id/ctHora"
@@ -37,10 +46,10 @@
         android:layout_alignLeft="@+id/ctTipo"
         android:layout_alignStart="@+id/ctTipo"
         android:layout_below="@+id/ctTipo"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="15dp"
         android:ems="10"
         android:hint="Hora"
-        android:inputType="time" />
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/ctData"
@@ -49,18 +58,9 @@
         android:layout_alignLeft="@+id/ctHora"
         android:layout_alignStart="@+id/ctHora"
         android:layout_below="@+id/ctHora"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="21dp"
         android:ems="10"
         android:hint="Data"
-        android:inputType="date" />
-
-    <Button
-        android:id="@+id/btSalvar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ctData"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
-        android:text="Salvar Compromisso" />
+        android:inputType="textPersonName" />
 
 </RelativeLayout>

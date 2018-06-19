@@ -20,7 +20,7 @@ public class Controller {
         db = banco.getWritableDatabase();
 
         v = new ContentValues();
-        v.put("descrição", descricao);
+        v.put("descricao", descricao);
         v.put("tipo", tipo);
         v.put("hora", hora);
         v.put("data", data);

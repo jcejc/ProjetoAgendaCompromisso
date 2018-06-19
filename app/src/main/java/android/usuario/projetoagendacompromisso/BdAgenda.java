@@ -14,9 +14,9 @@ public class BdAgenda extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase db) {
         String sql = "CREATE TABLE IF NOT EXISTS Agenda (" +
                 "_id integer primary key autoincrement not null, " +
-                "descricao VARCHAR(50) NOT NULL," +
-                "hora VARCHAR(5) NOT NULL," +
-                "data VARCHAR(10) NOT NULL)";
+                "descricao text," +
+                "hora text," +
+                "data text";
         db.execSQL(sql);
     }
 

@@ -21,6 +21,7 @@ public class AgendaActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent i = new Intent(AgendaActivity.this, CadActivity.class);
+                i.putExtra("situacao", "inserir");
                 startActivity(i);
             }
         });
