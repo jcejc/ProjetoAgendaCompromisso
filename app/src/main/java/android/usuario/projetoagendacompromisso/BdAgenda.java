@@ -7,16 +7,17 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class BdAgenda extends SQLiteOpenHelper{
 
     public BdAgenda(Context context){
-        super(context,"BdAgenda.bd" , null, 1);}
+        super(context,"BdAgenda.bd" , null, 2);}
 
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE IF NOT EXISTS Agenda (" +
+        String sql = "CREATE TABLE Agenda (" +
                 "_id integer primary key autoincrement not null, " +
                 "descricao text," +
+                "tipo text," +
                 "hora text," +
-                "data text";
+                "data text)";
         db.execSQL(sql);
     }
 
