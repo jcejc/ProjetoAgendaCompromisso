@@ -10,7 +10,7 @@ public class Controller {
     BdAgenda banco;
 
     public Controller(Context context) {
-        banco = new BdAgenda((javax.naming.Context) context);
+        banco = new BdAgenda(context);
     }
 
     public String inserir(String descricao, String hora, String data) {
@@ -83,6 +83,20 @@ public class Controller {
             return "Erro ao alterar o registro";
         }else{
             return  "Registro alterado com sucesso!!!";
+        }
+    }
+
+    public String excluir(int id) {
+        String where;
+        db = banco.getWritableDatabase();
+        where = "_id=" + id;
+        int result = db.delete("Agenda", where, null);
+        db.close();
+
+        if (result == -1) {
+            return "Erro ao excluir o registro";
+        } else {
+            return "Registro excluido com sucesso";
         }
     }
 }

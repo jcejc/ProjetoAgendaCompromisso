@@ -1,23 +1,22 @@
 package android.usuario.projetoagendacompromisso;
 
+import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import javax.naming.Context;
-
 public class BdAgenda extends SQLiteOpenHelper{
 
-    public BdAgenda(Context context){super((android.content.Context) context, "bdagenda", null, 2);}
+    public BdAgenda(Context context){
+        super(context,"BdAgenda.bd" , null, 1);}
 
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATe TABLE Agenda (" +
+        String sql = "CREATE TABLE IF NOT EXISTS Agenda (" +
                 "_id integer primary key autoincrement not null, " +
-                "descricao text," +
-                "hora text," +
-                "data text)";
-
+                "descricao VARCHAR(50) NOT NULL," +
+                "hora VARCHAR(5) NOT NULL," +
+                "data VARCHAR(10) NOT NULL)";
         db.execSQL(sql);
     }
 
