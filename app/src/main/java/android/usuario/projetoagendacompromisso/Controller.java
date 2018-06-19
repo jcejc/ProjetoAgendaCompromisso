@@ -13,7 +13,7 @@ public class Controller {
         banco = new BdAgenda(context);
     }
 
-    public String inserir(String descricao, String hora, String data) {
+    public String inserir(String descricao, String tipo, String hora, String data) {
         ContentValues v;
         long valores;
 
@@ -21,6 +21,7 @@ public class Controller {
 
         v = new ContentValues();
         v.put("descrição", descricao);
+        v.put("tipo", tipo);
         v.put("hora", hora);
         v.put("data", data);
 
@@ -75,7 +76,7 @@ public class Controller {
         valores.put("tipo", tipo);
         valores.put("hora", hora);
         valores.put("data", data);
-        //UPDATE cliente set descricao = "descricao", tipo = "tipo"
+        //UPDATE agenda set descricao = "descricao", tipo = "tipo"
         int result = db.update("Agenda", valores, where, null);
         db.close();
 

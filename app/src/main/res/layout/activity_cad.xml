@@ -6,59 +6,50 @@
     android:layout_height="match_parent"
     tools:context="android.usuario.projetoagendacompromisso.CadActivity">
 
+
     <EditText
-        android:id="@+id/rtDescricao"
+        android:id="@+id/ctDescricao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="64dp"
         android:ems="10"
         android:hint="Descrição"
         android:inputType="textPersonName" />
 
-    <RadioGroup
-        android:id="@+id/Tipo"
-        android:layout_width="150dp"
-        android:layout_height="80dp"
-        android:layout_below="@+id/rtDescricao"
-        android:layout_alignLeft="@+id/rtDescricao"
-        android:layout_alignStart="@+id/rtDescricao"
-        android:layout_marginTop="29dp">
-
-        <RadioButton
-            android:id="@+id/rbReuniao"
-            android:layout_width="wrap_content"
-            android:layout_height="43dp"
-            android:text="Reunião" />
-
-        <RadioButton
-            android:id="@+id/rbVisita"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:text="Visita ao Cliente" />
-    </RadioGroup>
-
     <EditText
-        android:id="@+id/rtHora"
+        android:id="@+id/ctTipo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/Tipo"
-        android:layout_alignStart="@+id/Tipo"
-        android:layout_below="@+id/Tipo"
-        android:layout_marginTop="27dp"
+        android:layout_alignLeft="@+id/ctDescricao"
+        android:layout_alignStart="@+id/ctDescricao"
+        android:layout_below="@+id/ctDescricao"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Tipo"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/ctHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ctTipo"
+        android:layout_alignStart="@+id/ctTipo"
+        android:layout_below="@+id/ctTipo"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:hint="Hora"
         android:inputType="time" />
 
     <EditText
-        android:id="@+id/rtData"
+        android:id="@+id/ctData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/rtHora"
-        android:layout_alignStart="@+id/rtHora"
-        android:layout_below="@+id/rtHora"
-        android:layout_marginTop="11dp"
+        android:layout_alignLeft="@+id/ctHora"
+        android:layout_alignStart="@+id/ctHora"
+        android:layout_below="@+id/ctHora"
+        android:layout_marginTop="31dp"
         android:ems="10"
         android:hint="Data"
         android:inputType="date" />
@@ -67,10 +58,9 @@
         android:id="@+id/btSalvar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
-        android:text="Salvar Compromisso"
-        android:layout_below="@+id/rtData"
-        android:layout_centerHorizontal="true" />
-
+        android:layout_below="@+id/ctData"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:text="Salvar Compromisso" />
 
 </RelativeLayout>
