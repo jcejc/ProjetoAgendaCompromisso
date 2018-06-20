@@ -67,7 +67,7 @@ public class Controller {
         db = banco.getWritableDatabase();
 
         //_id =3
-        where = "_id" + id;
+        where = "_id=" + id;
 
         //A chave se refere a coluna do db, que é o primeiro parametro
         valores  = new ContentValues();
@@ -99,5 +99,18 @@ public class Controller {
         } else {
             return "Registro excluido com sucesso";
         }
+    }
+
+    public Cursor listaDoDia(String data) {
+        Cursor cursor;
+        String[] campos = {"_id", "descricao", "tipo", "hora", "data"};
+        String where = "data"+ data;
+        db = banco.getReadableDatabase();
+        cursor = db.query("Agenda", campos, null, null, null, null, null, null);
+        if (cursor != null) {
+            cursor.moveToFirst();
+        }
+        db.close();
+        return cursor;
     }
 }
