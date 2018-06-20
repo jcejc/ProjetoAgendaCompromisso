@@ -50,7 +50,7 @@ public class listarCompromissosDoDia extends AppCompatActivity {
                 cursor.moveToPosition(i);
                 codigo = cursor.getString(cursor.getColumnIndexOrThrow("_id"));
                 AlertDialog.Builder builder = new AlertDialog.Builder(getBaseContext());
-                builder.setMessage("Qual Função Deseja Realizar?");
+                builder.setMessage("Qual Operação Deseja Realizar?");
                 builder.setPositiveButton("Alterar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -64,7 +64,7 @@ public class listarCompromissosDoDia extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         AlertDialog.Builder builder = new AlertDialog.Builder(getBaseContext());
-                        builder.setMessage("Deseja Excluir o Registro");
+                        builder.setMessage("Têm Certeza Que Deseja Excluir o Registro");
                         builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
