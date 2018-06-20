@@ -11,17 +11,26 @@
         android:id="@+id/btCadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
-        android:text="Registrar Compromisso"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="108dp"
+        android:text="Registrar Compromisso" />
 
     <Button
         android:id="@+id/btLista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lista de Compromissos"
-        android:layout_below="@+id/btCadastro"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="51dp" />
+        android:layout_marginTop="194dp"
+        android:text="Lista de Compromissos" />
+
+    <Button
+        android:id="@+id/btListaHoje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="182dp"
+        android:text="Listar compromissos do dia" />
 </RelativeLayout>

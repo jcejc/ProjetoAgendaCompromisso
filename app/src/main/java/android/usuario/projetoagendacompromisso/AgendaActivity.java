@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class AgendaActivity extends AppCompatActivity {
 
-    Button btCadastro, btLista;
+    Button btCadastro, btLista, btListaHoje;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,5 +35,15 @@ public class AgendaActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        btListaHoje = (Button) findViewById(R.id.btListaHoje);
+        btListaHoje.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(AgendaActivity.this, listarCompromissosDoDia.class);
+                startActivity(i);
+            }
+        });
+
     }
 }

@@ -101,16 +101,20 @@ public class Controller {
         }
     }
 
-    public Cursor listaDoDia(String data) {
+    public Cursor listarCompromissosdodia(String i) {
         Cursor cursor;
         String[] campos = {"_id", "descricao", "tipo", "hora", "data"};
-        String where = "data"+ data;
+        String condicao = "data='" + i+"'";
         db = banco.getReadableDatabase();
-        cursor = db.query("Agenda", campos, null, null, null, null, null, null);
+        cursor = db.query("Agenda", campos, condicao, null, null, null, null);
         if (cursor != null) {
+
             cursor.moveToFirst();
         }
         db.close();
         return cursor;
     }
+
+
+
 }
